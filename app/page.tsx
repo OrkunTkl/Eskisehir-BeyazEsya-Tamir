@@ -1,35 +1,26 @@
-import { Intro } from "@/components/Intro";
-import {
-  Marquees,
-  Statement,
-  ServiceList,
-  Stack,
-  Process,
-  Finale,
-} from "@/components/Sections";
+import { meta } from "@/lib/seo";
+import { ParticleStage } from "@/components/ParticleStage";
+import { Hero } from "@/components/Hero";
+import { ApplianceRows } from "@/components/ApplianceRows";
+import { RepairOrNew } from "@/components/RepairOrNew";
+import { Process } from "@/components/Process";
+import { CallbackSection } from "@/components/CallbackSection";
 
-/** Bölümler dönüşümlü: açık (kemik) → koyu → limon → video; köşeleri yuvarlak, üst üste biner. */
-const block = "relative z-10 -mt-12 rounded-t-[3rem]";
-export default function Page() {
+export const metadata = meta(
+  "Eskişehir Beyaz Eşya Tamiri | Çamaşır, Bulaşık, Buzdolabı, Fırın",
+  "Eskişehir'de çamaşır makinesi, bulaşık makinesi, buzdolabı, fırın ve kurutma makinesi arızaları için ilk kontroller ve uygun ustaya yönlendirme.",
+  "/",
+);
+
+export default function Home() {
   return (
     <>
-      <Intro />
-      <div
-        className={`${block} bg-[#efece6] text-[#0a0b0d] [--stroke:#0a0b0d]`}
-      >
-        <Marquees />
-        <Statement />
-        <ServiceList />
-      </div>
-      <div className={`${block} bg-[#0a0b0d]`}>
-        <Stack />
-      </div>
-      <div
-        className={`${block} bg-[#d4ff3a] text-[#0a0b0d] [--stroke:#0a0b0d]`}
-      >
-        <Process />
-      </div>
-      <Finale />
+      <ParticleStage />
+      <Hero />
+      <ApplianceRows />
+      <RepairOrNew />
+      <Process />
+      <CallbackSection />
     </>
   );
 }

@@ -1,13 +1,43 @@
 @import "tailwindcss";
-@import "@fontsource/bricolage-grotesque/700.css";
-@import "@fontsource/bricolage-grotesque/800.css";
-@theme { --font-sans: "Bricolage Grotesque", system-ui, sans-serif; }
-html { background: #0a0b0d; color: #f4f2ec; }
+@import "@fontsource-variable/unbounded/index.css";
+@import "@fontsource-variable/onest/index.css";
+
+@theme {
+  --color-porcelain: #f1f2ef;
+  --color-graphite: #14171a;
+  --color-steel: #aab3ba;
+  --color-mint: #1fe0c4;
+  --color-amber: #ffb224;
+  --color-coral: #ff7a66;
+  --font-display: "Unbounded Variable", system-ui, sans-serif;
+  --font-sans: "Onest Variable", system-ui, sans-serif;
+}
+html { background: var(--color-porcelain); scroll-padding-top: 6rem; }
+body {
+  color: var(--color-graphite);
+  font-family: var(--font-sans);
+  font-size: 1.0625rem;
+  line-height: 1.6;
+  overflow-x: clip;
+  -webkit-font-smoothing: antialiased;
+}
 html.lenis, html.lenis body { height: auto; }
-body { font-family: var(--font-sans); -webkit-font-smoothing: antialiased; overflow-x: clip; }
-.mega { font-size: clamp(3.4rem, 14vw, 15rem); line-height: .86; letter-spacing: -0.05em; font-weight: 800; }
-.big { font-size: clamp(2.2rem, 6.4vw, 7rem); line-height: .95; letter-spacing: -0.04em; font-weight: 700; }
-.outline { color: transparent; -webkit-text-stroke: 1.5px var(--stroke, #f4f2ec); }
-@media (pointer: fine) { body, a, button { cursor: none; } }
-@media (pointer: coarse) { .cur { display: none; } }
-::selection { background: #d4ff3a; color: #0a0b0d; }
+.lenis.lenis-smooth { scroll-behavior: auto !important; }
+.lenis.lenis-stopped { overflow: hidden; }
+.has-stage #tamir-mi-yeni-mi { background: transparent; }
+h1, h2, h3 { text-wrap: balance; }
+
+/* Başlık yazısı: Unbounded, geniş ve yumuşak hatlı; ürün paneli üzerindeki baskıyı andırır. */
+.disp { font-family: var(--font-display); font-weight: 600; letter-spacing: -0.04em; line-height: 1.04; }
+.disp-xl { font-size: clamp(2.5rem, 7vw, 7.2rem); }
+.disp-lg { font-size: clamp(2.1rem, 4.6vw, 4.6rem); }
+.disp-col { font-size: clamp(2rem, 3.8vw, 3.9rem); line-height: 1.08; }
+.disp-md { font-size: clamp(1.45rem, 2.4vw, 2.3rem); line-height: 1.12; }
+.lead { max-width: 36rem; font-size: clamp(1.08rem, 1.3vw, 1.28rem); line-height: 1.6; }
+
+:focus-visible { outline: 3px solid var(--color-graphite); outline-offset: 3px; }
+.on-dark :focus-visible { outline-color: var(--color-mint); }
+::selection { background: var(--color-mint); color: var(--color-graphite); }
+.skip { position: absolute; left: 1rem; top: -4rem; z-index: 100; border-radius: 9999px; background: var(--color-graphite); color: #fff; padding: .6rem 1.1rem; font-size: .875rem; transition: top .2s; }
+.skip:focus { top: 1rem; }
+@media (prefers-reduced-motion: reduce) { * { transition-duration: .01ms !important; animation: none !important; } }

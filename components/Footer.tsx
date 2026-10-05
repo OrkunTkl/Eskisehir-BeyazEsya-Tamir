@@ -1,29 +1,30 @@
 import Link from "next/link";
 import { appliances } from "@/data/appliances";
-import { districts, PHONE_DISPLAY, telLink, waLink, ext } from "@/lib/contact";
+import { Cta } from "@/components/Cta";
 
-const h = "mb-5 text-sm font-semibold uppercase tracking-widest opacity-50";
+export const TRANSPARENCY_TEXT =
+  "Eskişehir Beyaz Eşya Tamiri, beyaz eşya tamiri arayanları anlaşmalı bağımsız servis sağlayıcılarla buluşturan bir yönlendirme platformudur. Tamiri yönlendirilen servis sağlayıcı yapar. Platform hiçbir markanın yetkili servisi değildir.";
+
 export function Footer() {
   return (
-    <footer className="relative z-10 -mt-12 overflow-hidden rounded-t-[3rem] bg-[#efece6] px-6 pb-28 pt-24 text-[#0a0b0d] md:px-14 md:pb-10">
-      <div className="grid gap-14 md:grid-cols-[1.3fr_1fr_1fr_1.2fr]">
+    <footer className="on-dark overflow-hidden bg-graphite px-5 pb-28 pt-20 text-white md:px-10 md:pb-10 lg:px-14">
+      <div className="mx-auto grid max-w-[1500px] gap-14 md:grid-cols-[1.4fr_1fr_1fr]">
         <div>
-          <p className="text-2xl font-extrabold tracking-tight">
-            eskişehir<span className="opacity-50"> beyaz eşya</span>
+          <p className="disp disp-lg max-w-xl">
+            Bozulan ne olursa olsun, tek numara.
           </p>
-          <p className="mt-4 max-w-xs opacity-70">
-            Çamaşır, bulaşık, buzdolabı, fırın ve kurutma makinesi arızalarında
-            yerinde servis için ustaya yönlendirme.
-          </p>
+          <div className="mt-8 [&_a:first-child]:bg-white [&_a:first-child]:text-graphite [&_a:last-child]:border-white/30 [&_a:last-child]:text-white">
+            <Cta />
+          </div>
         </div>
-        <nav>
-          <p className={h}>Hizmetler</p>
-          <ul className="space-y-3 text-lg">
+        <nav aria-label="Cihazlar">
+          <p className="font-semibold text-white/45">Cihazlar</p>
+          <ul className="mt-4 space-y-2">
             {appliances.map((a) => (
               <li key={a.slug}>
                 <Link
+                  className="text-white/85 hover:text-mint"
                   href={`/${a.slug}`}
-                  className="transition-opacity hover:opacity-60"
                 >
                   {a.name} tamiri
                 </Link>
@@ -31,36 +32,33 @@ export function Footer() {
             ))}
           </ul>
         </nav>
-        <div>
-          <p className={h}>İletişim</p>
-          <ul className="space-y-3 text-lg">
-            <li>
-              <a href={telLink()} className="font-semibold">
-                {PHONE_DISPLAY}
-              </a>
-            </li>
-            <li>
-              <a href={waLink()} {...ext}>
-                WhatsApp ↗
-              </a>
-            </li>
-            <li className="opacity-70">Her gün · Eskişehir</li>
+        <nav aria-label="Sayfalar">
+          <p className="font-semibold text-white/45">Sayfalar</p>
+          <ul className="mt-4 space-y-2">
+            {[
+              ["/ariza-merkezi", "Arıza merkezi"],
+              ["/#tamir-mi-yeni-mi", "Tamir mi, yenisi mi?"],
+              ["/eskisehir", "Hizmet bölgesi"],
+              ["/gizlilik", "Aydınlatma metni"],
+            ].map(([h, l]) => (
+              <li key={h}>
+                <Link className="text-white/85 hover:text-mint" href={h}>
+                  {l}
+                </Link>
+              </li>
+            ))}
           </ul>
-        </div>
-        <div>
-          <p className={h}>Hizmet bölgesi</p>
-          <p className="leading-7 opacity-70">{districts.join(" · ")}</p>
-        </div>
+        </nav>
       </div>
-      <p className="mega mt-24 select-none text-center !text-[19vw] !leading-[.8] opacity-[0.08]">
-        ESKİŞEHİR
+      <p className="mx-auto mt-16 max-w-[1500px] text-sm text-white/50 md:max-w-3xl md:mx-0 md:pl-0">
+        {TRANSPARENCY_TEXT}
       </p>
-      <div className="mt-10 flex flex-col justify-between gap-3 border-t border-black/15 pt-6 text-sm opacity-60 md:flex-row">
-        <span>© {new Date().getFullYear()} Eskişehir Beyaz Eşya</span>
-        <span>
-          Marka yetkili servisi değildir; bağımsız usta yönlendirme hizmetidir.
-        </span>
-      </div>
+      <p
+        aria-hidden
+        className="disp mx-auto mt-10 max-w-[1500px] select-none whitespace-nowrap text-[min(19vw,19rem)] leading-[.85] text-mint"
+      >
+        Arayın.
+      </p>
     </footer>
   );
 }

@@ -2,30 +2,41 @@
 import { useRef } from "react";
 import { motion, useMotionValue, useSpring } from "framer-motion";
 import { PHONE_DISPLAY, telLink, waLink, ext } from "@/lib/contact";
+import { track } from "@/lib/analytics";
+import { WhatsAppIcon } from "@/components/WhatsAppIcon";
 
+// Düğme imlece hafifçe yaklaşır (manyetik). Dokunmatik ekranda etkisizdir.
 function Mag({
   children,
   href,
-  primary,
+  kind,
   external,
+  onClick,
 }: {
   children: React.ReactNode;
   href: string;
-  primary?: boolean;
+  kind: "solid" | "line";
   external?: boolean;
+  onClick?: () => void;
 }) {
   const ref = useRef<HTMLAnchorElement>(null);
-  const x = useSpring(useMotionValue(0), { stiffness: 220, damping: 14 }),
-    y = useSpring(useMotionValue(0), { stiffness: 220, damping: 14 });
+  const x = useSpring(useMotionValue(0), { stiffness: 240, damping: 16 });
+  const y = useSpring(useMotionValue(0), { stiffness: 240, damping: 16 });
   const move = (e: React.PointerEvent) => {
+    if (e.pointerType !== "mouse") return;
     const b = ref.current!.getBoundingClientRect();
-    x.set((e.clientX - b.left - b.width / 2) * 0.35);
-    y.set((e.clientY - b.top - b.height / 2) * 0.5);
+    x.set((e.clientX - b.left - b.width / 2) * 0.22);
+    y.set((e.clientY - b.top - b.height / 2) * 0.32);
   };
+  const cls =
+    kind === "solid"
+      ? "bg-graphite text-white hover:bg-mint hover:text-graphite"
+      : "border-2 border-graphite/30 text-graphite hover:border-graphite hover:bg-graphite hover:text-white";
   return (
     <motion.a
       ref={ref}
       href={href}
+      onClick={onClick}
       {...(external ? ext : {})}
       style={{ x, y }}
       onPointerMove={move}
@@ -33,21 +44,27 @@ function Mag({
         x.set(0);
         y.set(0);
       }}
-      className={`inline-flex items-center gap-3 rounded-full px-8 py-5 text-lg font-bold backdrop-blur-sm ${primary ? "bg-[#d4ff3a] text-[#0a0b0d]" : "border border-white/50 text-white"}`}
+      className={`inline-flex items-center gap-3 rounded-full px-7 py-4 text-base font-semibold transition-colors duration-300 ${cls}`}
     >
       {children}
     </motion.a>
   );
 }
-export function CallButtons({ topic }: { topic?: string }) {
+
+export function Cta({ topic }: { topic?: string }) {
   return (
     <div className="flex flex-wrap gap-3">
-      <Mag href={telLink()} primary>
-        <span className="size-2.5 animate-pulse rounded-full bg-[#0a0b0d]" />
-        {PHONE_DISPLAY}
+      <Mag href={telLink()} kind="solid" onClick={() => track("phone_click")}>
+        <span className="size-2 rounded-full bg-mint" />
+        {PHONE_DISPLAY || "Hemen ara"}
       </Mag>
-      <Mag href={waLink(topic)} external>
-        WhatsApp'tan yaz ↗
+      <Mag
+        href={waLink(topic)}
+        kind="line"
+        external
+        onClick={() => track("whatsapp_click", { problem: topic })}
+      >
+        <WhatsAppIcon size={18} /> WhatsApp&apos;tan yaz
       </Mag>
     </div>
   );
