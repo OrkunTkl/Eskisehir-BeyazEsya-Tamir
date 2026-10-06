@@ -69,3 +69,8 @@ export function Cta({ topic }: { topic?: string }) {
     </div>
   );
 }
+
+/** Eski bölümlerin (Intro, Sections) kullandığı, konusuz Cta kısayolu. */
+export function CallButtons() {
+  return <Cta />;
+}

@@ -1,10 +1,10 @@
 import { meta } from "@/lib/seo";
 import { ParticleStage } from "@/components/ParticleStage";
 import { Hero } from "@/components/Hero";
-import { ApplianceRows } from "@/components/ApplianceRows";
-import { RepairOrNew } from "@/components/RepairOrNew";
+import { ApplianceRows } from "@/components/Appliancerows";
+import { RepairOrNew } from "@/components/Repairornew";
 import { Process } from "@/components/Process";
-import { CallbackSection } from "@/components/CallbackSection";
+import { CallbackSection } from "@/components/CallBackSection";
 
 export const metadata = meta(
   "Eskişehir Beyaz Eşya Tamiri | Çamaşır, Bulaşık, Buzdolabı, Fırın",

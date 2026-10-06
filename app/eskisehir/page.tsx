@@ -1,9 +1,9 @@
 import { meta, breadcrumb } from "@/lib/seo";
 import { districts } from "@/lib/contact";
 import { Article } from "@/components/Article";
-import { JsonLd } from "@/components/JsonLd";
+import { JsonLd } from "@/components/Jsonld";
 import { Cta } from "@/components/Cta";
-import { CallbackSection } from "@/components/CallbackSection";
+import { CallbackSection } from "@/components/CallBackSection";
 import { TRANSPARENCY_TEXT } from "@/components/Footer";
 
 export const metadata = meta(

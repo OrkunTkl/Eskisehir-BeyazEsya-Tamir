@@ -4,9 +4,9 @@ import { guides, guideBySlug } from "@/data/guides";
 import { bySlug } from "@/data/appliances";
 import { Article } from "@/components/Article";
 import { Cta } from "@/components/Cta";
-import { JsonLd } from "@/components/JsonLd";
+import { JsonLd } from "@/components/Jsonld";
 import { FaqSection } from "@/components/Faq";
-import { CallbackSection } from "@/components/CallbackSection";
+import { CallbackSection } from "@/components/CallBackSection";
 import { meta, breadcrumb, articleSchema } from "@/lib/seo";
 
 export const dynamicParams = false;

@@ -124,7 +124,7 @@ export function ServiceList() {
               <span className="relative flex items-end justify-between gap-6 py-6 transition-all duration-500 ease-[cubic-bezier(.16,1,.3,1)] group-hover:px-6 group-hover:text-[#0a0b0d] md:py-8">
                 <span className="flex items-baseline gap-5 md:gap-10">
                   <span className="text-sm font-semibold opacity-60">
-                    {a.tag}
+                    {String(i + 1).padStart(2, "0")}
                   </span>
                   <span className="mega !text-[clamp(2.6rem,9.5vw,10rem)] !leading-[.95]">
                     {a.name}
@@ -155,7 +155,9 @@ function Card({ p, i, n }: { p: MotionValue<number>; i: number; n: number }) {
         className="grid h-[68vh] origin-top gap-6 rounded-[2rem] p-7 text-[#0a0b0d] md:grid-cols-2 md:p-12"
       >
         <div className="flex flex-col justify-between">
-          <span className="text-sm font-bold">{a.tag} / 05</span>
+          <span className="text-sm font-bold">
+            {String(i + 1).padStart(2, "0")} / 05
+          </span>
           <h3 className="mega !text-[clamp(2.8rem,8vw,8rem)]">{a.name}</h3>
         </div>
         <div className="flex flex-col justify-between">

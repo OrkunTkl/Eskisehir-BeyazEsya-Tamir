@@ -3,7 +3,7 @@ import "./globals.css";
 import { Header, StickyBar } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Smooth } from "@/components/Smooth";
-import { JsonLd } from "@/components/JsonLd";
+import { JsonLd } from "@/components/Jsonld";
 import { organization, website, SITE_NAME } from "@/lib/seo";
 import { SITE } from "@/lib/contact";
 
