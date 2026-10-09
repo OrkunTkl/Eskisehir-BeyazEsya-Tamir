@@ -1,5 +1,6 @@
 import { meta } from "@/lib/seo";
-import { PHONE_DISPLAY } from "@/lib/contact";
+// import { PHONE_DISPLAY } from "@/lib/contact"; // telefon gizlendi
+const PHONE_DISPLAY = ""; // telefon gizlendi
 import { Article } from "@/components/Article";
 
 export const metadata = meta(
@@ -19,10 +20,10 @@ export default function Page() {
       <div className="space-y-5 text-lg text-graphite/70">
         <p>
           Bu site, Eskişehir&apos;de beyaz eşya tamiri arayan kullanıcıların
-          talebini telefon veya WhatsApp üzerinden alıp uygun bağımsız servis
-          sağlayıcıya yönlendirir. Sitedeki talep formu bilgileri bir sunucuya
-          kaydetmez; girdiğiniz bilgiler yalnızca sizin başlattığınız hazır bir
-          WhatsApp mesajına dönüşür.
+          talebini WhatsApp üzerinden alıp uygun bağımsız servis sağlayıcıya
+          yönlendirir. Sitedeki talep formu bilgileri bir sunucuya kaydetmez;
+          girdiğiniz bilgiler yalnızca sizin başlattığınız hazır bir WhatsApp
+          mesajına dönüşür.
         </p>
         <p>
           <strong className="font-medium text-graphite">

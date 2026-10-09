@@ -1,7 +1,8 @@
 "use client";
 import { useRef } from "react";
 import { motion, useMotionValue, useSpring } from "framer-motion";
-import { PHONE_DISPLAY, telLink, waLink, ext } from "@/lib/contact";
+// import { PHONE_DISPLAY, telLink, waLink, ext } from "@/lib/contact"; // telefon gizlendi
+import { waLink, ext } from "@/lib/contact";
 import { track } from "@/lib/analytics";
 import { WhatsAppIcon } from "@/components/WhatsAppIcon";
 
@@ -54,13 +55,15 @@ function Mag({
 export function Cta({ topic }: { topic?: string }) {
   return (
     <div className="flex flex-wrap gap-3">
+      {/* Telefon ile arama gizlendi
       <Mag href={telLink()} kind="solid" onClick={() => track("phone_click")}>
         <span className="size-2 rounded-full bg-mint" />
         {PHONE_DISPLAY || "Hemen ara"}
       </Mag>
+      */}
       <Mag
         href={waLink(topic)}
-        kind="line"
+        kind="solid"
         external
         onClick={() => track("whatsapp_click", { problem: topic })}
       >

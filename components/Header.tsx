@@ -1,7 +1,8 @@
 "use client";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { PHONE_DISPLAY, telLink, waLink, ext } from "@/lib/contact";
+// import { PHONE_DISPLAY, telLink, waLink, ext } from "@/lib/contact"; // telefon gizlendi
+import { waLink, ext } from "@/lib/contact";
 import { track } from "@/lib/analytics";
 import { WhatsAppIcon } from "@/components/WhatsAppIcon";
 
@@ -40,6 +41,7 @@ export function Header() {
             </Link>
           ))}
         </nav>
+        {/* Telefon ile arama gizlendi
         <a
           href={telLink()}
           onClick={() => track("phone_click")}
@@ -49,6 +51,16 @@ export function Header() {
           <span className="hidden sm:inline">{PHONE_DISPLAY || "Ara"}</span>
           <span className="sm:hidden">Ara</span>
         </a>
+        */}
+        <a
+          href={waLink()}
+          {...ext}
+          onClick={() => track("whatsapp_click")}
+          className="inline-flex items-center gap-2 rounded-full bg-graphite px-5 py-2.5 text-[15px] font-semibold text-white transition-colors hover:bg-mint hover:text-graphite"
+        >
+          <span className="size-2 rounded-full bg-mint" />
+          WhatsApp
+        </a>
       </div>
     </motion.header>
   );
@@ -56,7 +68,8 @@ export function Header() {
 
 export function StickyBar() {
   return (
-    <div className="fixed inset-x-3 bottom-3 z-50 grid grid-cols-2 gap-2 pb-[env(safe-area-inset-bottom)] md:hidden">
+    <div className="fixed inset-x-3 bottom-3 z-50 grid grid-cols-1 gap-2 pb-[env(safe-area-inset-bottom)] md:hidden">
+      {/* Telefon ile arama gizlendi
       <a
         href={telLink()}
         onClick={() => track("phone_click")}
@@ -64,6 +77,7 @@ export function StickyBar() {
       >
         <span className="size-2 rounded-full bg-mint" /> Hemen ara
       </a>
+      */}
       <a
         href={waLink()}
         {...ext}

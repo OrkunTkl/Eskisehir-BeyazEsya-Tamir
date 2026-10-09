@@ -57,7 +57,7 @@ export function Hero() {
             className="lead mt-6 text-graphite/75"
           >
             Eskişehir&apos;de beyaz eşya tamiri için cihazınızı ve arızayı
-            seçin. Usta yönlendirmesi için arayın ya da yazın.
+            seçin. Usta yönlendirmesi için WhatsApp'tan yazın.
           </motion.p>
         </div>
 

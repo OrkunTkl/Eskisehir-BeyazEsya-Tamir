@@ -216,7 +216,7 @@ export function Stack() {
 const steps = [
   [
     "01",
-    "Arayın",
+    "Yazın",
     "Cihazı ve arızayı anlatın. WhatsApp'tan fotoğraf ya da video da atabilirsiniz.",
   ],
   [

@@ -10,7 +10,7 @@ import {
 const steps = [
   [
     "Anlatın",
-    "Arayın ya da WhatsApp'tan yazın. Cihazı, markayı, belirtiyi ve ilçenizi söylemeniz yeter.",
+    "WhatsApp'tan yazın. Cihazı, markayı, belirtiyi ve ilçenizi söylemeniz yeter.",
   ],
   [
     "Biz eşleştirelim",

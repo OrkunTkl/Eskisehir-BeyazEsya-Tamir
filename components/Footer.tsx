@@ -57,7 +57,7 @@ export function Footer() {
         aria-hidden
         className="disp mx-auto mt-10 max-w-[1500px] select-none whitespace-nowrap text-[min(19vw,19rem)] leading-[.85] text-mint"
       >
-        Arayın.
+        Yazın.
       </p>
     </footer>
   );
