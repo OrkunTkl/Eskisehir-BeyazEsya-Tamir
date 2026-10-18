@@ -39,6 +39,8 @@ export function Footer() {
               ["/ariza-merkezi", "Arıza merkezi"],
               ["/#tamir-mi-yeni-mi", "Tamir mi, yenisi mi?"],
               ["/eskisehir", "Hizmet bölgesi"],
+              ["/hakkimizda", "Hakkımızda"],
+              ["/iletisim", "İletişim"],
               ["/gizlilik", "Aydınlatma metni"],
             ].map(([h, l]) => (
               <li key={h}>

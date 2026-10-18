@@ -1,5 +1,9 @@
 import type { Metadata } from "next";
 import { SITE } from "./contact";
+// İçerik tarihleri: Article şeması ve sitemap buradan okur. Yayın günü sabit kalır.
+// Rehber/sayfa içeriğini ciddi biçimde genişlettiğinde CONTENT_UPDATED değerini o günün tarihiyle güncelle.
+export const CONTENT_PUBLISHED = "2026-10-17";
+export const CONTENT_UPDATED = "2026-10-17";
 
 export const SITE_NAME = "Eskişehir Beyaz Eşya Tamiri";
 export const OG = { url: "/og-default.png", width: 1200, height: 630, alt: "Eskişehir beyaz eşya tamiri: arıza rehberi ve usta yönlendirme" };
@@ -43,6 +47,8 @@ export const articleSchema = (headline: string, description: string, path: strin
   description,
   inLanguage: "tr-TR",
   mainEntityOfPage: `${SITE}${path}`,
+  datePublished: CONTENT_PUBLISHED,
+  dateModified: CONTENT_UPDATED,
   author: { "@type": "Organization", name: SITE_NAME, url: SITE },
   publisher: { "@type": "Organization", name: SITE_NAME, url: SITE },
 });
