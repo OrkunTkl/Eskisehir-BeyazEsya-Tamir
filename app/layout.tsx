@@ -1,9 +1,10 @@
 import type { Metadata, Viewport } from "next";
 import "./globals.css";
-import { Header, StickyBar } from "@/components/Header";
+import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Smooth } from "@/components/Smooth";
 import { JsonLd } from "@/components/Jsonld";
+import { WhatsAppFloat } from "@/components/WhatsAppFloat";
 import { organization, website, SITE_NAME } from "@/lib/seo";
 import { SITE } from "@/lib/contact";
 
@@ -18,9 +19,12 @@ export const metadata: Metadata = {
   title: { default: SITE_NAME, template: "%s" },
   applicationName: SITE_NAME,
   robots: { index: true, follow: true },
-  verification: process.env.NEXT_PUBLIC_GSC_VERIFICATION
-    ? { google: process.env.NEXT_PUBLIC_GSC_VERIFICATION }
-    : undefined,
+  verification: {
+    google: process.env.NEXT_PUBLIC_GSC_VERIFICATION || undefined,
+    other: process.env.NEXT_PUBLIC_BING_VERIFICATION
+      ? { "msvalidate.01": process.env.NEXT_PUBLIC_BING_VERIFICATION }
+      : undefined,
+  },
 };
 
 export default function RootLayout({
@@ -40,7 +44,7 @@ export default function RootLayout({
         <Header />
         <main id="main">{children}</main>
         <Footer />
-        <StickyBar />
+        <WhatsAppFloat />
       </body>
     </html>
   );

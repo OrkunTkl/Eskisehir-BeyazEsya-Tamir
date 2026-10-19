@@ -5,6 +5,7 @@ import { ApplianceRows } from "@/components/Appliancerows";
 import { RepairOrNew } from "@/components/Repairornew";
 import { Process } from "@/components/Process";
 import { CallbackSection } from "@/components/CallBackSection";
+import { ForumSection } from "@/components/ForumSection";
 
 export const metadata = meta(
   "Eskişehir Beyaz Eşya Tamiri | Çamaşır, Bulaşık, Buzdolabı, Fırın",
@@ -21,6 +22,7 @@ export default function Home() {
       <RepairOrNew />
       <Process />
       <CallbackSection />
+      <ForumSection />
     </>
   );
 }

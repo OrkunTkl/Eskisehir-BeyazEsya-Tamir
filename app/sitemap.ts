@@ -6,7 +6,7 @@ import { CONTENT_UPDATED } from "@/lib/seo";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const paths = [
-    "/", "/ariza-merkezi", "/eskisehir", "/hakkimizda", "/iletisim",
+    "/", "/ariza-merkezi", "/forum", "/eskisehir", "/hakkimizda", "/iletisim",
     ...appliances.map((a) => `/${a.slug}`),
     ...guides.map((g) => `/ariza-merkezi/${g.slug}`),
   ];
