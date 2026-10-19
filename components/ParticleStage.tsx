@@ -271,6 +271,28 @@ const FRAG = /* glsl */ `
 varying vec3 vC; varying float vA;
 void main(){ float d = length(gl_PointCoord-.5); float a = smoothstep(.5,.2,d); if(a<.01) discard; gl_FragColor = vec4(vC, a*vA); }`;
 
+/** Süs amaçlı WebGL sahnesi: veri tasarrufu açık ya da çok düşük bellekli cihazda hiç başlamaz. */
+const canRun = () => {
+  const n = navigator as Navigator & {
+    connection?: { saveData?: boolean };
+    deviceMemory?: number;
+  };
+  if (n.connection?.saveData) return false;
+  if (n.deviceMemory && n.deviceMemory <= 2) return false;
+  return true;
+};
+/** Sayfa tamamen yüklenip tarayıcı boşa çıkana kadar bekler; ilk boyama ve etkileşimi bloklamaz. */
+const whenIdle = () =>
+  new Promise<void>((resolve) => {
+    const go = () => {
+      if ("requestIdleCallback" in window)
+        window.requestIdleCallback(() => resolve(), { timeout: 3000 });
+      else setTimeout(resolve, 1200);
+    };
+    if (document.readyState === "complete") go();
+    else addEventListener("load", go, { once: true });
+  });
+
 export function ParticleStage() {
   const ref = useRef<HTMLCanvasElement>(null);
   useEffect(() => {
@@ -279,6 +301,9 @@ export function ParticleStage() {
     let dead = false;
     let cleanup = () => {};
     (async () => {
+      if (!canRun()) return;
+      await whenIdle();
+      if (dead) return;
       const THREE = await import("three");
       if (dead) return;
       const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;

@@ -12,14 +12,9 @@ const ease = [0.16, 1, 0.3, 1] as const;
 function Line({ children, i }: { children: React.ReactNode; i: number }) {
   return (
     <span className="block overflow-hidden pb-[.08em]">
-      <motion.span
-        className="block"
-        initial={{ y: "110%" }}
-        animate={{ y: 0 }}
-        transition={{ duration: 1, ease, delay: 0.1 + i * 0.12 }}
-      >
+      <span className="rise block" style={{ "--i": i } as React.CSSProperties}>
         {children}
-      </motion.span>
+      </span>
     </span>
   );
 }
@@ -50,22 +45,18 @@ export function Hero() {
             <Line i={1}>bozuldu?</Line>
             <span className="sr-only"> Eskişehir beyaz eşya tamiri</span>
           </h1>
-          <motion.p
-            initial={{ opacity: 0, y: 16 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, ease, delay: 0.55 }}
-            className="lead mt-6 text-graphite/75"
+          <p
+            className="lead lift mt-6 text-graphite/75"
+            style={{ "--d": 0.12 } as React.CSSProperties}
           >
             Eskişehir&apos;de beyaz eşya tamiri için cihazınızı ve arızayı
             seçin. Usta yönlendirmesi için WhatsApp'tan yazın.
-          </motion.p>
+          </p>
         </div>
 
-        <motion.div
-          initial={{ opacity: 0, y: 24 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, ease, delay: 0.4 }}
-          className="lg:col-start-2 lg:row-span-2 lg:row-start-1 lg:self-end"
+        <div
+          className="lift lg:col-start-2 lg:row-span-2 lg:row-start-1 lg:self-end"
+          style={{ "--d": 0.08 } as React.CSSProperties}
         >
           <div aria-hidden className="h-[34svh] lg:hidden" />
           <div
@@ -91,14 +82,12 @@ export function Hero() {
               </button>
             ))}
           </div>
-        </motion.div>
+        </div>
 
         <div className="lg:col-start-1 lg:row-start-2">
-          <motion.div
-            initial={{ opacity: 0, y: 24 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.9, ease, delay: 0.7 }}
-            className="mt-8 max-w-xl border-t border-graphite/15 pt-6"
+          <div
+            className="lift mt-8 max-w-xl border-t border-graphite/15 pt-6"
+            style={{ "--d": 0.16 } as React.CSSProperties}
           >
             <AnimatePresence mode="wait" initial={false}>
               <motion.div
@@ -143,7 +132,7 @@ export function Hero() {
                 </Link>
               </motion.div>
             </AnimatePresence>
-          </motion.div>
+          </div>
         </div>
       </div>
     </section>

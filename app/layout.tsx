@@ -1,4 +1,5 @@
 import type { Metadata, Viewport } from "next";
+import { Onest, Unbounded } from "next/font/google";
 import "./globals.css";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
@@ -7,6 +8,17 @@ import { JsonLd } from "@/components/Jsonld";
 import { WhatsAppFloat } from "@/components/WhatsAppFloat";
 import { organization, website, SITE_NAME } from "@/lib/seo";
 import { SITE } from "@/lib/contact";
+
+const onest = Onest({
+  subsets: ["latin", "latin-ext"],
+  variable: "--font-onest",
+  display: "swap",
+});
+const unbounded = Unbounded({
+  subsets: ["latin", "latin-ext"],
+  variable: "--font-unbounded",
+  display: "swap",
+});
 
 export const viewport: Viewport = {
   width: "device-width",
@@ -33,7 +45,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="tr">
+    <html lang="tr" className={`${onest.variable} ${unbounded.variable}`}>
       <body>
         <a href="#main" className="skip">
           İçeriğe geç
