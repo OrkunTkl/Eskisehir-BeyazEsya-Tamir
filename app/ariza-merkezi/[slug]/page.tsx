@@ -2,6 +2,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { guides, guideBySlug } from "@/data/guides";
 import { bySlug } from "@/data/appliances";
+import { guideDetails } from "@/data/guide-details";
 import { Article } from "@/components/Article";
 import { Cta } from "@/components/Cta";
 import { JsonLd } from "@/components/Jsonld";
@@ -66,6 +67,15 @@ export default async function Page({ params }: Props) {
           )}
         />
         <List h="Olası nedenler" items={g.causes} />
+        {(guideDetails[g.slug] ?? []).map((d) => (
+          <section
+            key={d.h}
+            className="mb-12 border-t border-graphite/20 pt-8 first-of-type:border-t-0 first-of-type:pt-0"
+          >
+            <h2 className="disp disp-md">{d.h}</h2>
+            <p className="mt-4 text-lg text-graphite/75">{d.p}</p>
+          </section>
+        ))}
         <List h="Güvenle neler yapabilirsiniz?" items={g.safe} />
         <List h="Ne zaman usta gerekir?" items={g.call} />
         <p className="text-sm text-graphite/55">

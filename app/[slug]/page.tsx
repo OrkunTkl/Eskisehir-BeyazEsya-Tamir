@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { appliances, bySlug } from "@/data/appliances";
+import { applianceDetails } from "@/data/appliance-details";
 import { Article } from "@/components/Article";
 import { Cta } from "@/components/Cta";
 import { JsonLd } from "@/components/Jsonld";
@@ -81,6 +82,11 @@ export default async function Page({ params }: Props) {
             ))}
           </ul>
         </Block>
+        {(applianceDetails[a.slug]?.sections ?? []).map((d) => (
+          <Block key={d.h} h={d.h}>
+            <p className="text-lg text-graphite/75">{d.p}</p>
+          </Block>
+        ))}
         <Block h="Önce güvenle deneyebilecekleriniz">
           <ul className="list-disc space-y-3 pl-5 text-lg text-graphite/80">
             {a.tips.map((t) => (
@@ -95,7 +101,9 @@ export default async function Page({ params }: Props) {
             ))}
           </ul>
         </Block>
-        <FaqSection items={a.faq} />
+        <FaqSection
+          items={[...a.faq, ...(applianceDetails[a.slug]?.faq ?? [])]}
+        />
         <nav aria-label="Diğer cihazlar" className="mt-16">
           <h2 className="disp disp-md">Diğer cihazlar</h2>
           <ul className="mt-5 space-y-2 text-lg">
