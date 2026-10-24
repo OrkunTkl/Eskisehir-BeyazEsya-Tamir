@@ -8,8 +8,8 @@ import { CallbackSection } from "@/components/CallBackSection";
 import { ForumSection } from "@/components/ForumSection";
 
 export const metadata = meta(
-  "Eskişehir Beyaz Eşya Tamiri | Çamaşır, Bulaşık, Buzdolabı, Fırın",
-  "Eskişehir'de çamaşır makinesi, bulaşık makinesi, buzdolabı, fırın ve kurutma makinesi arızaları için ilk kontroller ve uygun ustaya yönlendirme.",
+  "Eskişehir Beyaz Eşya Tamircisi | Çamaşır, Bulaşık, Buzdolabı",
+  "Eskişehir beyaz eşya tamircisi arıyorsanız: çamaşır, bulaşık makinesi, buzdolabı, fırın ve kurutma makinesi arızalarında ilk kontroller ve uygun ustaya yönlendirme.",
   "/",
 );
 

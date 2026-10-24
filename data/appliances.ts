@@ -25,9 +25,9 @@ export const appliances: Appliance[] = [
     name: "Çamaşır makinesi",
     label: "Çamaşır",
     short: "Su almıyor, sıkmıyor, ses yapıyor ya da kapağı açılmıyor.",
-    title: "Eskişehir Çamaşır Makinesi Tamiri | Arıza ve Yönlendirme",
+    title: "Eskişehir Çamaşır Makinesi Tamircisi | Arıza ve Tamir",
     description:
-      "Eskişehir'de çamaşır makinesi su almıyor, sıkma yapmıyor, ses yapıyor ya da kapağı açılmıyor mu? Önce güvenle deneyebilecekleriniz, sonra uygun ustaya yönlendirme.",
+      "Eskişehir çamaşır makinesi tamircisi arıyorsanız: çamaşır makinesi su almıyor, sıkma yapmıyor, ses yapıyor ya da kapağı açılmıyor mu? Önce güvenle deneyebilecekleriniz, sonra uygun ustaya yönlendirme.",
     lead: "Çamaşır makinesi arızalarının çoğu birkaç parçada toplanır: su giriş valfi, tahliye pompası, kayış ve motor, kapak kilidi, kart. Belirtiyi doğru tarif etmek, ustanın ilk gelişte işi bitirme ihtimalini yükseltir.",
     life: 10,
     problems: [
@@ -59,9 +59,9 @@ export const appliances: Appliance[] = [
     name: "Bulaşık makinesi",
     label: "Bulaşık",
     short: "Temiz yıkamıyor, su tahliye etmiyor, ısıtmıyor ya da su sızdırıyor.",
-    title: "Eskişehir Bulaşık Makinesi Tamiri | Arıza ve Yönlendirme",
+    title: "Eskişehir Bulaşık Makinesi Tamircisi | Arıza ve Tamir",
     description:
-      "Eskişehir'de bulaşık makinesi yıkamıyor, su tahliye etmiyor ya da hata veriyor mu? Güvenle deneyebileceğiniz adımlar ve uygun ustaya yönlendirme.",
+      "Eskişehir bulaşık makinesi tamircisi arıyorsanız: bulaşık makinesi yıkamıyor, su tahliye etmiyor ya da hata veriyor mu? Güvenle deneyebileceğiniz adımlar ve uygun ustaya yönlendirme.",
     lead: "Bulaşık makinesinde sorun çoğunlukla filtre ve püskürtme kollarının tıkanması, tahliye pompası, ısıtıcı ya da sızdıran bir conta olur. Küçük bakım çoğu zaman sorunu çözer; çözmezse parça kontrolü gerekir.",
     life: 10,
     problems: [
@@ -92,9 +92,9 @@ export const appliances: Appliance[] = [
     name: "Buzdolabı",
     label: "Buzdolabı",
     short: "Soğutmuyor, aşırı buz tutuyor, aralıksız çalışıyor ya da su akıtıyor.",
-    title: "Eskişehir Buzdolabı Tamiri | Soğutmuyor, Buz Tutuyor",
+    title: "Eskişehir Buzdolabı Tamircisi | Soğutmuyor, Buz Tutuyor",
     description:
-      "Eskişehir'de buzdolabı soğutmuyor, buz tutuyor ya da sürekli çalışıyor mu? Gıdaları korumak için ilk adımlar ve uygun ustaya yönlendirme.",
+      "Eskişehir buzdolabı tamircisi arıyorsanız: buzdolabı soğutmuyor, buz tutuyor ya da sürekli çalışıyor mu? Gıdaları korumak için ilk adımlar ve uygun ustaya yönlendirme.",
     lead: "Buzdolabı arızasında zaman önemlidir: gıdalar bozulabilir. Soğutma, defrost (buz çözme) sistemi, fan ve kompresör rölesi sık görülen noktalardır. Önce gıdaları koruyun, sonra arızayı ayırt edin.",
     life: 13,
     problems: [
@@ -126,9 +126,9 @@ export const appliances: Appliance[] = [
     name: "Fırın ve ocak",
     label: "Fırın",
     short: "Isıtmıyor, ocak tutuşmuyor, ısı eşit dağılmıyor ya da kapak sorunu var.",
-    title: "Eskişehir Fırın ve Ocak Tamiri | Isıtmıyor, Tutuşmuyor",
+    title: "Eskişehir Fırın ve Ocak Tamircisi | Isıtmıyor, Tutuşmuyor",
     description:
-      "Eskişehir'de fırın ısıtmıyor, ocak tutuşmuyor ya da ısı eşit dağılmıyor mu? Gaz güvenliği ve ilk kontroller, ardından uygun ustaya yönlendirme.",
+      "Eskişehir fırın ve ocak tamircisi arıyorsanız: fırın ısıtmıyor, ocak tutuşmuyor ya da ısı eşit dağılmıyor mu? Gaz güvenliği ve ilk kontroller, ardından uygun ustaya yönlendirme.",
     lead: "Fırın ve ocakta iki ayrı dünya vardır: elektrikli fırın (rezistans, termostat, sensör) ve gazlı ocak (ateşleme, emniyet). Gazla ilgili işlerde önce güvenlik gelir, müdahale yetkili kişilere bırakılır.",
     life: 15,
     problems: [
@@ -158,9 +158,9 @@ export const appliances: Appliance[] = [
     name: "Kurutma makinesi",
     label: "Kurutma",
     short: "Kurutmuyor, çok uzun sürüyor, tambur dönmüyor ya da su haznesi dolmuyor.",
-    title: "Eskişehir Kurutma Makinesi Tamiri | Kurutmuyor, Uzun Sürüyor",
+    title: "Eskişehir Kurutma Makinesi Tamircisi | Kurutmuyor, Uzun Sürüyor",
     description:
-      "Eskişehir'de kurutma makinesi kurutmuyor, çok uzun sürüyor ya da tambur dönmüyor mu? Filtre ve kondenser kontrolü, ardından uygun ustaya yönlendirme.",
+      "Eskişehir kurutma makinesi tamircisi arıyorsanız: kurutma makinesi kurutmuyor, çok uzun sürüyor ya da tambur dönmüyor mu? Filtre ve kondenser kontrolü, ardından uygun ustaya yönlendirme.",
     lead: "Kurutma makinelerinde sorun çoğu zaman hava yolundadır: dolu filtre, tıkalı kondenser, yetersiz havalandırma. Bunlar giderilince hâlâ kurutmuyorsa rezistans, termostat ya da sensör devreye girer.",
     life: 10,
     problems: [

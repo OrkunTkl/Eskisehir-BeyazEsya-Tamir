@@ -38,7 +38,7 @@ export default async function Page({ params }: Props) {
         aside={
           <>
             <h1 className="disp disp-col">
-              Eskişehir {a.name.toLowerCase()} tamiri
+              Eskişehir {a.name.toLowerCase()} tamircisi
             </h1>
             <p className="lead mt-6 text-graphite/75">{a.lead}</p>
             <div className="mt-8">
