@@ -13,13 +13,10 @@ const steps = [
     "WhatsApp'tan yazın. Cihazı, markayı, belirtiyi ve ilçenizi söylemeniz yeter.",
   ],
   [
-    "Biz eşleştirelim",
-    "İşe ve ilçenize uygun bağımsız servis sağlayıcıyı belirleyip talebinizi ona aktarırız.",
+    "Biz yönlendirelim",
+    "İşe ve ilçenize uygun ustayı belirleyip talebinizi ona iletiriz.",
   ],
-  [
-    "Usta sizi arasın",
-    "Servis sağlayıcı sizi arar, ne zaman gelebileceğini söyler.",
-  ],
+  ["Usta sizi arasın", "Usta sizi arar, ne zaman gelebileceğini söyler."],
   [
     "Yerinde tespit",
     "Usta arızayı görür. Fiyat ve işin kapsamı onunla netleşir; siz onaylarsanız iş başlar.",

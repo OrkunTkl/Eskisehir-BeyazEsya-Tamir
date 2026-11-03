@@ -22,8 +22,8 @@ export default function Page() {
             </h1>
             <p className="lead mt-6 text-graphite/75">
               Çamaşır, bulaşık, buzdolabı, fırın ya da kurutma makinesi için tek
-              bir yerden talep iletin. İlçenize ve cihaza göre uygun bağımsız
-              servis sağlayıcıyla görüşmenizi sağlarız.
+              bir yerden talep iletin. Sizi ilçenize ve cihaza göre uygun ustaya
+              yönlendiririz.
             </p>
             <div className="mt-8">
               <Cta />

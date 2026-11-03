@@ -9,7 +9,7 @@ export const dynamic = "force-static";
 export function GET() {
   const body = `# ${SITE_NAME}
 
-> Eskişehir'de beyaz eşya (çamaşır makinesi, bulaşık makinesi, buzdolabı, fırın-ocak, kurutma makinesi) arızası yaşayanlara ilk kontrolleri anlatan ve talebi anlaşmalı bağımsız servis sağlayıcıya yönlendiren bilgi platformu. Platform usta yönlendirir; işi usta yapar. Talepler WhatsApp üzerinden alınır; fiyatı usta arızayı gördükten sonra netleştirir.
+> Eskişehir'de beyaz eşya (çamaşır makinesi, bulaşık makinesi, buzdolabı, fırın-ocak, kurutma makinesi) arızası yaşayanlara ilk kontrolleri anlatan ve talebi ustaya yönlendiren bir platform. Biz usta yönlendiririz; işi usta yapar. Talepler WhatsApp üzerinden alınır; fiyatı usta arızayı gördükten sonra netleştirir.
 
 Hizmet bölgesi: Eskişehir merkez ve ilçeleri (${districts.join(", ")}).
 

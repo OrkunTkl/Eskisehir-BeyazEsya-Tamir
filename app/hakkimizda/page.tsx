@@ -9,7 +9,7 @@ import { TRANSPARENCY_TEXT } from "@/components/Footer";
 
 export const metadata = meta(
   "Hakkımızda | Eskişehir Beyaz Eşya Tamiri Nasıl Çalışır?",
-  "Eskişehir Beyaz Eşya Tamiri, cihazı bozulanları anlaşmalı bağımsız servis sağlayıcılara yönlendiren bir bilgi platformudur. Ne yaptığımızı ve ne yapmadığımızı açıkça anlatıyoruz.",
+  "Eskişehir Beyaz Eşya Tamiri, cihazı bozulanları Eskişehir'deki ustalara yönlendiren bir platformdur. Nasıl çalıştığımızı açıkça anlatıyoruz.",
   "/hakkimizda",
 );
 
@@ -35,7 +35,7 @@ export default function Page() {
             </h1>
             <p className="lead mt-6 text-graphite/75">
               Cihazınız bozulduğunda ne olduğunu anlamanıza yardım eder,
-              gerekiyorsa talebinizi uygun bağımsız servis sağlayıcıya iletiriz.
+              gerekiyorsa sizi uygun ustaya yönlendiririz.
             </p>
             <div className="mt-8">
               <Cta />
@@ -66,9 +66,8 @@ export default function Page() {
           </p>
           <p className="mt-4 text-lg text-graphite/75">
             İkincisi, usta gerektiğinde talebinizi WhatsApp&apos;tan alıp
-            ilçenize ve cihazınıza göre uygun bağımsız servis sağlayıcıya
-            aktarıyoruz. Servis sağlayıcı sizi arar, işin kapsamını ve fiyatı
-            onunla konuşursunuz.
+            ilçenize ve cihazınıza göre sizi uygun ustaya yönlendiriyoruz. Usta
+            sizi arar, işin kapsamını ve fiyatı onunla konuşursunuz.
           </p>
         </section>
 

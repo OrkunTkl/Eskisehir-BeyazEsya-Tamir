@@ -27,7 +27,7 @@ export const organization = {
   "@type": "Organization",
   name: SITE_NAME,
   url: SITE,
-  description: "Eskişehir'de beyaz eşya tamiri arayanları anlaşmalı bağımsız servis sağlayıcılara yönlendiren bilgi platformu.",
+  description: "Eskişehir'de beyaz eşya tamiri arayanları ustaya yönlendiren platform.",
 };
 export const website = { "@context": "https://schema.org", "@type": "WebSite", name: SITE_NAME, url: SITE, inLanguage: "tr-TR" };
 export const serviceSchema = (name: string, description: string, path: string) => ({
