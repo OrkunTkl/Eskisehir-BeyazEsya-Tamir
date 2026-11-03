@@ -73,12 +73,10 @@ export default function Page() {
         </section>
 
         <section className="mb-12 border-t border-graphite/20 pt-8">
-          <h2 className="disp disp-md">Ne yapmıyoruz?</h2>
+          <h2 className="disp disp-md">Fiyatı kim belirler?</h2>
           <p className="mt-4 text-lg text-graphite/75">
-            Cihazları kendimiz tamir etmiyoruz. Hiçbir markanın yetkili servisi
-            değiliz ve markalarla resmi bir bağımız yok. Fiyatı ve işin
-            kapsamını, arızayı gördükten sonra hizmeti verecek servis sağlayıcı
-            belirler.
+            Biz usta yönlendiriyoruz. Fiyatı ve işin kapsamını, arızayı
+            gördükten sonra usta sizinle netleştirir.
           </p>
         </section>
 

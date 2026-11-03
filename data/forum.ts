@@ -33,6 +33,6 @@ export const forum: FaqItem[] = [
   },
   {
     q: "Eskişehir’de usta nasıl bulunur ve fiyat nasıl belirlenir?",
-    a: "Cihazı, sorunu ve ilçenizi WhatsApp’tan yazarsınız; talebi uygun bağımsız servis sağlayıcıya aktarırız ve servis sağlayıcı sizi arar. Fiyatı ve işin kapsamını usta arızayı gördükten sonra sizinle netleştirir. Platform tamiri kendisi yapmaz ve hiçbir markanın yetkili servisi değildir.",
+    a: "Cihazı, sorunu ve ilçenizi WhatsApp’tan yazarsınız; talebi uygun bağımsız servis sağlayıcıya aktarırız ve servis sağlayıcı sizi arar. Fiyatı ve işin kapsamını usta arızayı gördükten sonra sizinle netleştirir. Biz usta yönlendiriyoruz; işi usta yapar.",
   },
 ];

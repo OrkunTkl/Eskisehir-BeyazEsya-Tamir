@@ -45,9 +45,8 @@ export default async function Page({ params }: Props) {
               <Cta topic={`${a.name} tamiri`} />
             </div>
             <p className="mt-8 max-w-xl text-sm text-graphite/55">
-              Bu platform tamiri kendisi yapmaz ve hiçbir markanın yetkili
-              servisi değildir; talebinizi uygun bağımsız servis sağlayıcıya
-              yönlendirir.
+              Talebinizi bırakın, sizi ilçenize uygun ustaya yönlendirelim. Usta
+              sizi arasın.
             </p>
           </>
         }

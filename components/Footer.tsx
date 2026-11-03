@@ -3,7 +3,7 @@ import { appliances } from "@/data/appliances";
 import { Cta } from "@/components/Cta";
 
 export const TRANSPARENCY_TEXT =
-  "Eskişehir Beyaz Eşya Tamiri, beyaz eşya tamiri arayanları anlaşmalı bağımsız servis sağlayıcılarla buluşturan bir yönlendirme platformudur. Tamiri yönlendirilen servis sağlayıcı yapar. Platform hiçbir markanın yetkili servisi değildir.";
+  "Eskişehir Beyaz Eşya Tamiri, Eskişehir'de beyaz eşyası bozulanları ilçesine ve cihazına uygun ustaya yönlendirir. Talebinizi bırakırsınız, usta sizi arar.";
 
 export function Footer() {
   return (

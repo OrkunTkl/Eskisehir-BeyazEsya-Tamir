@@ -41,9 +41,8 @@ export default function Page() {
           <h2 className="disp disp-md">Nasıl çalışır?</h2>
           <p className="mt-4 text-lg text-graphite/75">
             Sorununuzu WhatsApp ya da formla iletirsiniz. Biz cihazı ve ilçeyi
-            değerlendirir, uygun servis sağlayıcıya talebi aktarırız; servis
-            sağlayıcı sizi arar. Fiyat ve işin kapsamı, usta arızayı gördükten
-            sonra onunla netleşir.
+            değerlendirir, sizi uygun ustaya yönlendiririz; usta sizi arar.
+            Fiyat ve işin kapsamı, usta arızayı gördükten sonra onunla netleşir.
           </p>
         </section>
         <section className="mb-12 border-t border-graphite/20 pt-8">

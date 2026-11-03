@@ -11,7 +11,7 @@ export function CallbackSection() {
       <div className="mx-auto grid max-w-[1500px] gap-12 lg:grid-cols-[5fr_6fr] lg:gap-24">
         <div>
           <h2 id="talep-h" className="disp disp-xl">
-            Bildirin, ustayı bulalım.
+            Bildirin, ustaya yönlendirelim.
           </h2>
           <p className="lead mt-6 text-graphite/70">
             Bilgilerinizi girin; WhatsApp&apos;ta hazır bir mesaj olarak

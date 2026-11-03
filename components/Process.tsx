@@ -74,7 +74,8 @@ export function Process() {
             Dört adım.
           </h2>
           <p className="lead mt-6 text-graphite/70">
-            Bu platform tamiri kendisi yapmaz; sizi doğru ustayla buluşturur.
+            Talebinizi bırakın, sizi doğru ustaya yönlendirelim. Usta sizi
+            arasın.
           </p>
         </div>
         <div ref={ref} className="relative">
